@@ -1,6 +1,6 @@
 package estoque.estoque.clientes;
 
-public record DadosCadastroCliente <date>(String nome, date dataNascimento, String CPF, String CEP){
+public record DadosCadastroCliente (String nome, String dataNascimento, String cpf, String cep){
 
 
 }
