@@ -1,6 +1,18 @@
 package estoque.estoque.clientes;
 
-public record DadosCadastroCliente (String nome, String dataNascimento, String cpf, String cep){
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
 
+public record DadosCadastroCliente (
+        @NotBlank
+        String nome,
+        @NotBlank
+        String nascimento,
+        @NotBlank
+        @Pattern(regexp = "\\d{11}")
+        String cpf,
+        @NotBlank
+        @Pattern(regexp = "\\d{8}")
+        String cep) {
 
 }
