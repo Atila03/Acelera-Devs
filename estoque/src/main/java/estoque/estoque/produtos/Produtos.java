@@ -21,8 +21,9 @@ public class Produtos {
     private String nome;
     private float preco;
 
+    private Boolean ativo;
     public Produtos(DadosCadastroProduto registro) {
-        //this.ativo = true;
+        this.ativo = true;
         this.nome = registro.nome();
         this.codigo = registro.codigo();
         this.preco = registro.preco();
@@ -37,5 +38,9 @@ public class Produtos {
         if (registro.preco() != null) {
             this.preco = registro.preco();
         }
+    }
+
+      public void excluir() {
+        this.ativo = false;
     }
 }
